@@ -1,0 +1,50 @@
+.item1 {
+  grid-area: headerElement;
+}
+.item2 {
+  grid-area: menu;
+}
+.item3 {
+  grid-area: main;
+}
+.item4 {
+  grid-area: right;
+}
+.item5 {
+  grid-area: footer;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "headerElement headerElement headerElement headerElement headerElement headerElement"
+    "menu main main main right right"
+    ". footer footer footer footer footer";
+  grid-gap: 10px;
+  background-color: #2196f3;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+@media (max-width: 560px) {
+.grid-container {
+    grid-template-areas: "headerElement" "main" "right" "footer";
+}
+.item2 {
+    display: none;
+}
+.flex-container{
+    flex-direction: column;
+}
+}
